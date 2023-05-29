@@ -2,37 +2,49 @@
 
 Personal ESlint config forked from Remix to support non-remix environments.
 
----
-
-This package includes a shareable ESLint config for Remix projects.
-
-If you create your app with `create-remix` no additional configuration is necessary.
-
 ## Installation
 
 First, install this package along with ESLint in your project. **This package requires at least version 8.1 of ESLint**
 
 ```sh
-npm install -D eslint @remix-run/eslint-config
+npm install -D eslint @rileytomasek/eslint-config
 ```
+
+### Node.js
 
 Then create a file named `.eslintrc.js` in the root of your project:
 
 ```js filename=.eslintrc.js
 module.exports = {
-  extends: "@remix-run/eslint-config",
+  extends: [
+    "@rileytomaek/eslint-config",
+    "@rileytomaek/eslint-config/node",
+  ]
 };
 ```
 
-### Jest + Testing Library
+### React
 
-This packages also ships with optional configuration options for projects that use [Jest](https://jestjs.io/) with [Testing Library](https://testing-library.com). To enable these rules, add the following to your `.eslintrc`:
+Then create a file named `.eslintrc.js` in the root of your project:
 
 ```js filename=.eslintrc.js
 module.exports = {
   extends: [
-    "@remix-run/eslint-config",
-    "@remix-run/eslint-config/jest-testing-library",
+    "@rileytomaek/eslint-config",
+    "@rileytomaek/eslint-config/react",
+  ]
+};
+```
+
+### Jest
+
+This packages also ships with optional configuration options for projects that use [Jest](https://jestjs.io/). To enable these rules, add the following to your `.eslintrc`:
+
+```js filename=.eslintrc.js
+module.exports = {
+  extends: [
+    "@rileytomaek/eslint-config",
+    "@rileytomaek/eslint-config/jest",
   ],
 };
 ```
@@ -42,8 +54,6 @@ Please note that because this ruleset is optional, we do not include the core li
 ```json filename=package.json
 {
   "dependencies": {
-    "@testing-library/jest-dom": ">=5.16.0",
-    "@testing-library/react": ">=12.0.0",
     "jest": ">=26.0.0"
   }
 }
