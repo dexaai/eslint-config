@@ -6,4 +6,15 @@ module.exports = {
   'import/first': ERROR,
   'import/no-amd': ERROR,
   'import/no-webpack-loader-syntax': ERROR,
+  'import/order': [
+    ERROR,
+    {
+      'newlines-between': 'always',
+      groups: [
+        ['builtin', 'external'],
+        'internal',
+        ['parent', 'sibling', 'index'],
+      ],
+    },
+  ],
 };
