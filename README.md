@@ -1,4 +1,8 @@
-# `@remix-run/eslint-config`
+# Forked from `@remix-run/eslint-config`
+
+Personal ESlint config forked from Remix to support non-remix environments.
+
+---
 
 This package includes a shareable ESLint config for Remix projects.
 

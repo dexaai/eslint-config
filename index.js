@@ -1,18 +1,18 @@
 // Splitting rules into separate modules allow for a lower-level API if our
 // default rules become difficult to extend without lots of duplication.
-const coreRules = require("./rules/core");
-const importRules = require("./rules/import");
-const reactRules = require("./rules/react");
-const jsxA11yRules = require("./rules/jsx-a11y");
-const typescriptRules = require("./rules/typescript");
-const importSettings = require("./settings/import");
-const reactSettings = require("./settings/react");
+const coreRules = require('./rules/core');
+const importRules = require('./rules/import');
+const reactRules = require('./rules/react');
+const jsxA11yRules = require('./rules/jsx-a11y');
+const typescriptRules = require('./rules/typescript');
+const importSettings = require('./settings/import');
+const reactSettings = require('./settings/react');
 
 /**
  * @see https://github.com/eslint/eslint/issues/3458
  * @see https://www.npmjs.com/package/@rushstack/eslint-patch
  */
-require("@rushstack/eslint-patch/modern-module-resolution");
+require('@rushstack/eslint-patch/modern-module-resolution');
 
 const OFF = 0;
 // const WARN = 1;
@@ -20,13 +20,13 @@ const OFF = 0;
 
 /** @type {import('eslint').Linter.Config} */
 const config = {
-  parser: "@babel/eslint-parser",
+  parser: '@babel/eslint-parser',
   parserOptions: {
-    sourceType: "module",
+    sourceType: 'module',
     requireConfigFile: false,
-    ecmaVersion: "latest",
+    ecmaVersion: 'latest',
     babelOptions: {
-      presets: [require.resolve("@babel/preset-react")],
+      presets: [require.resolve('@babel/preset-react')],
     },
   },
   env: {
@@ -34,7 +34,7 @@ const config = {
     commonjs: true,
     es6: true,
   },
-  plugins: ["import", "react", "react-hooks", "jsx-a11y"],
+  plugins: ['import', 'react', 'react-hooks', 'jsx-a11y'],
   settings: {
     ...reactSettings,
     ...importSettings,
@@ -61,34 +61,34 @@ const config = {
   },
   overrides: [
     {
-      files: ["**/*.ts?(x)"],
-      extends: ["plugin:import/typescript"],
-      parser: "@typescript-eslint/parser",
+      files: ['**/*.ts?(x)'],
+      extends: ['plugin:import/typescript'],
+      parser: '@typescript-eslint/parser',
       parserOptions: {
-        sourceType: "module",
+        sourceType: 'module',
         ecmaVersion: 2019,
         ecmaFeatures: {
           jsx: true,
         },
         warnOnUnsupportedTypeScriptVersion: true,
       },
-      plugins: ["@typescript-eslint"],
+      plugins: ['@typescript-eslint'],
       rules: {
         ...typescriptRules,
       },
     },
     {
       files: [
-        "**/routes/**/*.js?(x)",
-        "**/routes/**/*.tsx",
-        "app/root.js?(x)",
-        "app/root.tsx",
+        '**/routes/**/*.js?(x)',
+        '**/routes/**/*.tsx',
+        'app/root.js?(x)',
+        'app/root.tsx',
       ],
       rules: {
         // Routes may use default exports without a name. At the route level
         // identifying components for debugging purposes is less of an issue, as
         // the route boundary is more easily identifiable.
-        "react/display-name": OFF,
+        'react/display-name': OFF,
       },
     },
   ],
