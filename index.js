@@ -2,11 +2,8 @@
 // default rules become difficult to extend without lots of duplication.
 const coreRules = require('./rules/core');
 const importRules = require('./rules/import');
-const reactRules = require('./rules/react');
-const jsxA11yRules = require('./rules/jsx-a11y');
 const typescriptRules = require('./rules/typescript');
 const importSettings = require('./settings/import');
-const reactSettings = require('./settings/react');
 
 /**
  * @see https://github.com/eslint/eslint/issues/3458
@@ -29,14 +26,8 @@ const config = {
       presets: [require.resolve('@babel/preset-react')],
     },
   },
-  env: {
-    browser: true,
-    commonjs: true,
-    es6: true,
-  },
-  plugins: ['import', 'react', 'react-hooks', 'jsx-a11y'],
+  plugins: ['import'],
   settings: {
-    ...reactSettings,
     ...importSettings,
   },
 
@@ -56,8 +47,6 @@ const config = {
   rules: {
     ...coreRules,
     ...importRules,
-    ...reactRules,
-    ...jsxA11yRules,
   },
   overrides: [
     {
