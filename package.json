@@ -1,8 +1,9 @@
 {
   "name": "@rileytomasek/eslint-config",
-  "version": "1.16.1",
+  "version": "0.0.0",
   "description": "Personal ESLint configuration forked from Remix",
   "repository": "rileytomasek/eslint-config",
+  "private": false,
   "license": "MIT",
   "main": "index.js",
   "files": [
@@ -15,7 +16,8 @@
     "settings"
   ],
   "scripts": {
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "release": "np"
   },
   "dependencies": {
     "@babel/core": "^7.21.8",
@@ -39,6 +41,7 @@
     "@types/eslint": "^8.37.0",
     "eslint": "^8.37.0",
     "jest": "^27.5.1",
+    "np": "7.6.3",
     "react": "^18.2.0",
     "typescript": "^5.0.4"
   },
@@ -53,5 +56,10 @@
   },
   "engines": {
     "node": ">=16.0.0"
-  }
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "packageManager": "npm@9.6.7"
 }
