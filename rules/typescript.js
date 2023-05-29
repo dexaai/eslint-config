@@ -8,7 +8,7 @@ module.exports = {
 
   // Add TypeScript specific rules (and turn off ESLint equivalents)
   '@typescript-eslint/consistent-type-assertions': WARN,
-  '@typescript-eslint/consistent-type-imports': WARN,
+  '@typescript-eslint/consistent-type-imports': ERROR,
 
   'no-array-constructor': OFF,
   '@typescript-eslint/no-array-constructor': WARN,
