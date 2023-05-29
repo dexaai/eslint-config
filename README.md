@@ -36,6 +36,16 @@ module.exports = {
 };
 ```
 
+Please note that because this ruleset is optional, we do not include the core libraries as peer dependencies for this package. If you use these rules, be sure that you have the following dependencies installed in your project:
+
+```json filename=package.json
+{
+  "dependencies": {
+    "react": "*",
+  }
+}
+```
+
 ### Jest
 
 This packages also ships with optional configuration options for projects that use [Jest](https://jestjs.io/). To enable these rules, add the following to your `.eslintrc`:
