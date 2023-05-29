@@ -1,24 +1,16 @@
 {
-  "name": "@remix-run/eslint-config",
+  "name": "@rileytomasek/eslint-config",
   "version": "1.16.1",
-  "description": "ESLint configuration for Remix projects",
-  "bugs": {
-    "url": "https://github.com/remix-run/remix/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/remix-run/remix",
-    "directory": "packages/remix-eslint-config"
-  },
+  "description": "Personal ESLint configuration forked from Remix",
+  "repository": "rileytomasek/eslint-config",
   "license": "MIT",
   "main": "index.js",
   "files": [
     "README.md",
     "index.js",
-    "internal.js",
-    "jest.js",
     "jest-testing-library.js",
     "node.js",
+    "react.js",
     "rules",
     "settings"
   ],
@@ -53,7 +45,6 @@
   },
   "peerDependencies": {
     "eslint": "^8.0.0",
-    "react": "^17.0.0 || ^18.0.0",
     "typescript": "^4.0.0 || ^5.0.0"
   },
   "peerDependenciesMeta": {
@@ -62,6 +53,6 @@
     }
   },
   "engines": {
-    "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
+    "node": ">=16.0.0"
   }
 }
