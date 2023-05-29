@@ -1,6 +1,5 @@
 const jestRules = require('./rules/jest');
 const jestDomRules = require('./rules/jest-dom');
-const testingLibraryRules = require('./rules/testing-library');
 
 /**
  * @see https://github.com/eslint/eslint/issues/3458
@@ -9,7 +8,7 @@ const testingLibraryRules = require('./rules/testing-library');
 require('@rushstack/eslint-patch/modern-module-resolution');
 
 module.exports = {
-  plugins: ['jest', 'jest-dom', 'testing-library'],
+  plugins: ['jest', 'jest-dom'],
   env: {
     node: true,
   },
@@ -22,7 +21,6 @@ module.exports = {
       rules: {
         ...jestRules,
         ...jestDomRules,
-        ...testingLibraryRules,
       },
     },
   ],
