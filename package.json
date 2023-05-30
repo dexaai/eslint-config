@@ -17,7 +17,8 @@
   ],
   "scripts": {
     "format": "prettier --write .",
-    "release": "np"
+    "release": "np",
+    "test": "exit 0"
   },
   "dependencies": {
     "@babel/core": "^7.21.8",
