@@ -9,7 +9,7 @@ module.exports = {
   'import/order': [
     ERROR,
     {
-      'newlines-between': 'always',
+      'newlines-between': 'never',
       groups: [
         ['builtin', 'external'],
         'internal',
