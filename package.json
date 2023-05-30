@@ -9,7 +9,7 @@
   "files": [
     "README.md",
     "index.js",
-    "jest-testing-library.js",
+    "jest.js",
     "node.js",
     "react.js",
     "rules",
