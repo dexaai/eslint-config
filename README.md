@@ -17,8 +17,8 @@ Then create a file named `.eslintrc.js` in the root of your project:
 ```js filename=.eslintrc.js
 module.exports = {
   extends: [
-    "@rileytomaek/eslint-config",
-    "@rileytomaek/eslint-config/node",
+    "@rileytomasek/eslint-config",
+    "@rileytomasek/eslint-config/node",
   ]
 };
 ```
@@ -30,8 +30,8 @@ Then create a file named `.eslintrc.js` in the root of your project:
 ```js filename=.eslintrc.js
 module.exports = {
   extends: [
-    "@rileytomaek/eslint-config",
-    "@rileytomaek/eslint-config/react",
+    "@rileytomasek/eslint-config",
+    "@rileytomasek/eslint-config/react",
   ]
 };
 ```
@@ -53,8 +53,8 @@ This packages also ships with optional configuration options for projects that u
 ```js filename=.eslintrc.js
 module.exports = {
   extends: [
-    "@rileytomaek/eslint-config",
-    "@rileytomaek/eslint-config/jest",
+    "@rileytomasek/eslint-config",
+    "@rileytomasek/eslint-config/jest",
   ],
 };
 ```
