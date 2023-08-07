@@ -1,13 +1,13 @@
 # Forked from `@remix-run/eslint-config`
 
-Personal ESlint config forked from Remix to support non-remix environments.
+Dexa ESlint config forked from Remix to support non-remix environments.
 
 ## Installation
 
 First, install this package along with ESLint in your project. **This package requires at least version 8.1 of ESLint**
 
 ```sh
-npm install -D eslint @rileytomasek/eslint-config
+npm install -D eslint @dexaai/eslint-config
 ```
 
 ### Node.js
@@ -17,8 +17,8 @@ Then create a file named `.eslintrc.js` in the root of your project:
 ```js filename=.eslintrc.js
 module.exports = {
   extends: [
-    "@rileytomasek/eslint-config",
-    "@rileytomasek/eslint-config/node",
+    "@dexaai/eslint-config",
+    "@dexaai/eslint-config/node",
   ]
 };
 ```
@@ -30,8 +30,8 @@ Then create a file named `.eslintrc.js` in the root of your project:
 ```js filename=.eslintrc.js
 module.exports = {
   extends: [
-    "@rileytomasek/eslint-config",
-    "@rileytomasek/eslint-config/react",
+    "@dexaai/eslint-config",
+    "@dexaai/eslint-config/react",
   ]
 };
 ```
@@ -53,8 +53,8 @@ This packages also ships with optional configuration options for projects that u
 ```js filename=.eslintrc.js
 module.exports = {
   extends: [
-    "@rileytomasek/eslint-config",
-    "@rileytomasek/eslint-config/jest",
+    "@dexaai/eslint-config",
+    "@dexaai/eslint-config/jest",
   ],
 };
 ```

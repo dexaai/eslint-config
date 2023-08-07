@@ -1,8 +1,8 @@
 {
-  "name": "@rileytomasek/eslint-config",
+  "name": "@dexaai/eslint-config",
   "version": "0.1.3",
-  "description": "Personal ESLint configuration forked from Remix",
-  "repository": "rileytomasek/eslint-config",
+  "description": "Dexa ESLint config",
+  "repository": "dexaai/eslint-config",
   "private": false,
   "license": "MIT",
   "main": "index.js",
