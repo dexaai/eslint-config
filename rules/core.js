@@ -49,6 +49,7 @@ module.exports = {
   'no-new-func': WARN,
   'no-new-object': WARN,
   'no-octal': WARN,
+  'no-process-env': ERROR,
   'no-redeclare': ERROR,
   'no-script-url': WARN,
   'no-self-assign': WARN,
