@@ -9,6 +9,7 @@ module.exports = {
   'no-array-constructor': WARN,
   'no-caller': ERROR,
   'no-cond-assign': [WARN, 'except-parens'],
+  'no-console': ERROR,
   'no-const-assign': ERROR,
   'no-control-regex': WARN,
   'no-dupe-args': WARN,
