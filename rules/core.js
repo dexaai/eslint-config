@@ -12,6 +12,7 @@ module.exports = {
   'no-console': ERROR,
   'no-const-assign': ERROR,
   'no-control-regex': WARN,
+  'no-debugger': ERROR,
   'no-dupe-args': WARN,
   'no-dupe-class-members': WARN,
   'no-dupe-keys': WARN,
