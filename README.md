@@ -1,6 +1,6 @@
 # Forked from `@remix-run/eslint-config`
 
-Dexa ESlint config forked from Remix to support non-remix environments.
+Dexa ESlint config used for all projects.
 
 ## Installation
 
@@ -10,61 +10,10 @@ First, install this package along with ESLint in your project. **This package re
 npm install -D eslint @dexaai/eslint-config
 ```
 
-### Node.js
-
-Then create a file named `.eslintrc.js` in the root of your project:
+Then create a file named `.eslintrc.js` in the root of the project/package:
 
 ```js filename=.eslintrc.js
 module.exports = {
-  extends: [
-    "@dexaai/eslint-config",
-    "@dexaai/eslint-config/node",
-  ]
+  extends: [ "@dexaai/eslint-config" ]
 };
-```
-
-### React
-
-Then create a file named `.eslintrc.js` in the root of your project:
-
-```js filename=.eslintrc.js
-module.exports = {
-  extends: [
-    "@dexaai/eslint-config",
-    "@dexaai/eslint-config/react",
-  ]
-};
-```
-
-Please note that because this ruleset is optional, we do not include the core libraries as peer dependencies for this package. If you use these rules, be sure that you have the following dependencies installed in your project:
-
-```json filename=package.json
-{
-  "dependencies": {
-    "react": "*",
-  }
-}
-```
-
-### Jest
-
-This packages also ships with optional configuration options for projects that use [Jest](https://jestjs.io/). To enable these rules, add the following to your `.eslintrc`:
-
-```js filename=.eslintrc.js
-module.exports = {
-  extends: [
-    "@dexaai/eslint-config",
-    "@dexaai/eslint-config/jest",
-  ],
-};
-```
-
-Please note that because this ruleset is optional, we do not include the core libraries as peer dependencies for this package. If you use these rules, be sure that you have the following dependencies installed in your project:
-
-```json filename=package.json
-{
-  "dependencies": {
-    "jest": ">=26.0.0"
-  }
-}
 ```
