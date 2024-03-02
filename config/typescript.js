@@ -1,74 +1,15 @@
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
-  root: true,
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    warnOnUnsupportedTypeScriptVersion: false,
-    sourceType: 'module',
-  },
-  env: {
-    browser: false,
-    node: true,
-    es6: true,
-  },
+  files: ['**/*.{ts,tsx,mts,cts}'],
+
+  plugins: ['@typescript-eslint'],
+
   extends: [
-    'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/stylistic',
   ],
-  plugins: [
-    '@typescript-eslint',
-    'no-null',
-    // 'eslint-plugin-local',
-    // 'simple-import-sort',
-  ],
-  ignorePatterns: [
-    '**/node_modules/**',
-    '/built/**',
-    '/tests/**',
-    '/lib/**',
-    '/src/lib/*.generated.d.ts',
-    '/scripts/**/*.js',
-    '/scripts/**/*.d.*',
-    '/internal/**',
-    '/coverage/**',
-  ],
+
   rules: {
-    // eslint
-    'dot-notation': 'error',
-    eqeqeq: 'error',
-    'no-caller': 'error',
-    'no-constant-condition': ['error', { checkLoops: false }],
-    'no-eval': 'error',
-    'no-extra-bind': 'error',
-    'no-new-func': 'error',
-    'no-new-wrappers': 'error',
-    'no-return-await': 'error',
-    'no-restricted-globals': [
-      'error',
-      { name: 'setTimeout' },
-      { name: 'clearTimeout' },
-      { name: 'setInterval' },
-      { name: 'clearInterval' },
-      { name: 'setImmediate' },
-      { name: 'clearImmediate' },
-    ],
-    'no-template-curly-in-string': 'error',
-    'no-throw-literal': 'error',
-    'no-undef-init': 'error',
-    'no-var': 'error',
-    'object-shorthand': 'error',
-    'prefer-const': 'error',
-    'prefer-object-spread': 'error',
-    'unicode-bom': ['error', 'never'],
-
-    // Enabled in eslint:recommended, but not applicable here
-    'no-extra-boolean-cast': 'off',
-    'no-case-declarations': 'off',
-    'no-cond-assign': 'off',
-    'no-control-regex': 'off',
-    'no-inner-declarations': 'off',
-
     // @typescript-eslint/eslint-plugin
     '@typescript-eslint/naming-convention': [
       'error',
@@ -129,7 +70,6 @@ module.exports = {
     ],
 
     '@typescript-eslint/unified-signatures': 'error',
-    'no-unused-expressions': 'off',
     '@typescript-eslint/no-unused-expressions': [
       'error',
       { allowTernary: true },
@@ -169,40 +109,8 @@ module.exports = {
 
     // Pending https://github.com/typescript-eslint/typescript-eslint/issues/4820
     '@typescript-eslint/prefer-optional-chain': 'off',
-
-    // scripts/eslint/rules
-    // 'local/only-arrow-functions': [
-    //   'error',
-    //   {
-    //     allowNamedFunctions: true,
-    //     allowDeclarations: true,
-    //   },
-    // ],
-    // 'local/argument-trivia': 'error',
-    // 'local/no-in-operator': 'error',
-    // 'local/debug-assert': 'error',
-    // 'local/no-keywords': 'error',
-    // 'local/jsdoc-format': 'error',
-
-    // eslint-plugin-no-null
-    'no-null/no-null': 'error',
-
-    // eslint-plugin-simple-import-sort
-    // 'simple-import-sort/imports': 'error',
-    // 'simple-import-sort/exports': 'error',
   },
   overrides: [
-    // By default, the ESLint CLI only looks at .js files. But, it will also look at
-    // any files which are referenced in an override config. Most users of typescript-eslint
-    // get this behavior by default by extending a recommended typescript-eslint config, which
-    // just so happens to override some core ESLint rules. We don't extend from any config, so
-    // explicitly reference TS files here so the CLI picks them up.
-    //
-    // ESLint in VS Code will lint any opened file (so long as it's not eslintignore'd), so
-    // that will work regardless of the below.
-    //
-    // The same applies to mjs files; ESLint appears to not scan those either.
-    { files: ['*.ts', '*.tsx', '*.mts', '*.cts', '*.mjs', '*.cjs'] },
     {
       files: ['*.mjs', '*.mts'],
       rules: {
@@ -217,13 +125,5 @@ module.exports = {
         ],
       },
     },
-    // {
-    //   // These files contain imports in a specific order that are generally unsafe to modify.
-    //   files: ['**/_namespaces/**'],
-    //   rules: {
-    //     'simple-import-sort/imports': 'off',
-    //     'simple-import-sort/exports': 'off',
-    //   },
-    // },
   ],
 };
