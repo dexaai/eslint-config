@@ -1,5 +1,3 @@
-const importSettings = require('./settings/import');
-
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
   root: true,
@@ -22,7 +20,7 @@ module.exports = {
     '@typescript-eslint',
     'no-null',
     // 'eslint-plugin-local',
-    'simple-import-sort',
+    // 'simple-import-sort',
   ],
   ignorePatterns: [
     '**/node_modules/**',
@@ -190,8 +188,8 @@ module.exports = {
     'no-null/no-null': 'error',
 
     // eslint-plugin-simple-import-sort
-    'simple-import-sort/imports': 'error',
-    'simple-import-sort/exports': 'error',
+    // 'simple-import-sort/imports': 'error',
+    // 'simple-import-sort/exports': 'error',
   },
   overrides: [
     // By default, the ESLint CLI only looks at .js files. But, it will also look at
@@ -219,13 +217,13 @@ module.exports = {
         ],
       },
     },
-    {
-      // These files contain imports in a specific order that are generally unsafe to modify.
-      files: ['**/_namespaces/**'],
-      rules: {
-        'simple-import-sort/imports': 'off',
-        'simple-import-sort/exports': 'off',
-      },
-    },
+    // {
+    //   // These files contain imports in a specific order that are generally unsafe to modify.
+    //   files: ['**/_namespaces/**'],
+    //   rules: {
+    //     'simple-import-sort/imports': 'off',
+    //     'simple-import-sort/exports': 'off',
+    //   },
+    // },
   ],
 };
