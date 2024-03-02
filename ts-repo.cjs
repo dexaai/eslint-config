@@ -1,3 +1,5 @@
+const importSettings = require('./settings/import');
+
 /** @type {import('eslint').Linter.Config} */
 module.exports = {
   root: true,
@@ -19,7 +21,7 @@ module.exports = {
   plugins: [
     '@typescript-eslint',
     'no-null',
-    'eslint-plugin-local',
+    // 'eslint-plugin-local',
     'simple-import-sort',
   ],
   ignorePatterns: [
@@ -171,18 +173,18 @@ module.exports = {
     '@typescript-eslint/prefer-optional-chain': 'off',
 
     // scripts/eslint/rules
-    'local/only-arrow-functions': [
-      'error',
-      {
-        allowNamedFunctions: true,
-        allowDeclarations: true,
-      },
-    ],
-    'local/argument-trivia': 'error',
-    'local/no-in-operator': 'error',
-    'local/debug-assert': 'error',
-    'local/no-keywords': 'error',
-    'local/jsdoc-format': 'error',
+    // 'local/only-arrow-functions': [
+    //   'error',
+    //   {
+    //     allowNamedFunctions: true,
+    //     allowDeclarations: true,
+    //   },
+    // ],
+    // 'local/argument-trivia': 'error',
+    // 'local/no-in-operator': 'error',
+    // 'local/debug-assert': 'error',
+    // 'local/no-keywords': 'error',
+    // 'local/jsdoc-format': 'error',
 
     // eslint-plugin-no-null
     'no-null/no-null': 'error',
@@ -202,7 +204,7 @@ module.exports = {
     // that will work regardless of the below.
     //
     // The same applies to mjs files; ESLint appears to not scan those either.
-    { files: ['*.ts', '*.mts', '*.cts', '*.mjs', '*.cjs'] },
+    { files: ['*.ts', '*.tsx', '*.mts', '*.cts', '*.mjs', '*.cjs'] },
     {
       files: ['*.mjs', '*.mts'],
       rules: {
