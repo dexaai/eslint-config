@@ -84,6 +84,7 @@ module.exports = {
         minimumDescriptionLength: 10,
       },
     ],
+    '@typescript-eslint/consistent-type-definitions': 'off',
 
     // Rules enabled in typescript-eslint configs that are not applicable here
     '@typescript-eslint/class-literal-property-style': 'off',
