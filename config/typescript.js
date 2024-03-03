@@ -2,7 +2,7 @@
 module.exports = {
   files: ['**/*.{ts,tsx,mts,cts}'],
 
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'simple-import-sort'],
 
   extends: [
     'plugin:@typescript-eslint/recommended',
@@ -10,7 +10,9 @@ module.exports = {
   ],
 
   rules: {
-    // @typescript-eslint/eslint-plugin
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
+
     '@typescript-eslint/naming-convention': [
       'error',
       {
@@ -73,6 +75,14 @@ module.exports = {
     '@typescript-eslint/no-unused-expressions': [
       'error',
       { allowTernary: true },
+    ],
+    '@typescript-eslint/consistent-type-imports': [
+      'error',
+      {
+        prefer: 'type-imports',
+        disallowTypeAnnotations: true,
+        fixStyle: 'inline-type-imports',
+      },
     ],
 
     // Rules enabled in typescript-eslint configs that are not applicable here

@@ -25,7 +25,6 @@ module.exports = {
 
   overrides: [
     './config/typescript',
-    './config/import',
     './config/react',
     './config/tests',
     './config/prettier',

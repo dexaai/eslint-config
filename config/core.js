@@ -19,7 +19,7 @@ module.exports = {
     'no-duplicate-case': 'warn',
     'no-empty-character-class': 'warn',
     'no-empty-pattern': 'warn',
-    'no-duplicate-imports': 'warn',
+    'no-duplicate-imports': 'error',
     'no-empty': ['warn', { allowEmptyCatch: true }],
     'no-eval': 'error',
     'no-ex-assign': 'warn',
