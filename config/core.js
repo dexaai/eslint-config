@@ -4,6 +4,7 @@ module.exports = {
   rules: {
     // Our existing rules
     'array-callback-return': 'error',
+    'curly': ['error', 'multi-line'],
     'getter-return': 'error',
     'new-parens': 'error',
     'no-array-constructor': 'error',
