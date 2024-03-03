@@ -84,9 +84,16 @@ module.exports = {
         fixStyle: 'inline-type-imports',
       },
     ],
+    '@typescript-eslint/ban-ts-comment': {
+      'ts-expect-error': 'allow-with-description',
+      'ts-ignore': 'error',
+      'ts-nocheck': 'error',
+      'ts-check': 'error',
+      // Require a description for @ts-expect-error to be 10 characters or more.
+      minimumDescriptionLength: 10,
+    },
 
     // Rules enabled in typescript-eslint configs that are not applicable here
-    '@typescript-eslint/ban-ts-comment': 'off',
     '@typescript-eslint/class-literal-property-style': 'off',
     '@typescript-eslint/consistent-indexed-object-style': 'off',
     '@typescript-eslint/no-duplicate-enum-values': 'off',
