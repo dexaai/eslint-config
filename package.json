@@ -9,7 +9,8 @@
   "files": [
     "README.md",
     "config",
-    "index.js"
+    "index.js",
+    "node.js"
   ],
   "scripts": {
     "format": "prettier --write .",

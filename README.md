@@ -17,3 +17,12 @@ module.exports = {
   extends: [ "@dexaai/eslint-config" ]
 };
 ```
+
+For Node-only projects (no React/browser code), use the `node` config:
+
+```js filename=.eslintrc.js
+module.exports = {
+  extends: [ "@dexaai/eslint-config/node" ]
+};
+```
+
