@@ -34,6 +34,13 @@ module.exports = {
   rules: {
     'react/display-name': 'off',
     'react/forbid-foreign-prop-types': ['error', { allowInPropTypes: true }],
+    'react/function-component-definition': [
+      'error',
+      {
+        namedComponents: 'function-declaration',
+        unnamedComponents: 'arrow-function',
+      },
+    ],
     'react/jsx-key': 'error',
     'react/jsx-no-comment-textnodes': 'error',
     'react/jsx-no-target-blank': 'error',
