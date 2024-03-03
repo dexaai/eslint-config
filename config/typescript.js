@@ -2,7 +2,7 @@
 module.exports = {
   files: ['**/*.{ts,tsx,mts,cts}'],
 
-  plugins: ['@typescript-eslint', 'simple-import-sort'],
+  plugins: ['@typescript-eslint'],
 
   extends: [
     'plugin:@typescript-eslint/recommended',
@@ -10,9 +10,6 @@ module.exports = {
   ],
 
   rules: {
-    'simple-import-sort/imports': 'error',
-    'simple-import-sort/exports': 'error',
-
     '@typescript-eslint/naming-convention': [
       'error',
       {
@@ -76,22 +73,17 @@ module.exports = {
       'error',
       { allowTernary: true },
     ],
-    '@typescript-eslint/consistent-type-imports': [
+    '@typescript-eslint/ban-ts-comment': [
       'error',
       {
-        prefer: 'type-imports',
-        disallowTypeAnnotations: true,
-        fixStyle: 'inline-type-imports',
+        'ts-expect-error': 'allow-with-description',
+        'ts-ignore': true,
+        'ts-nocheck': true,
+        'ts-check': false,
+        // Require a description for @ts-expect-error to be 10 characters or more.
+        minimumDescriptionLength: 10,
       },
     ],
-    '@typescript-eslint/ban-ts-comment': {
-      'ts-expect-error': 'allow-with-description',
-      'ts-ignore': 'error',
-      'ts-nocheck': 'error',
-      'ts-check': 'error',
-      // Require a description for @ts-expect-error to be 10 characters or more.
-      minimumDescriptionLength: 10,
-    },
 
     // Rules enabled in typescript-eslint configs that are not applicable here
     '@typescript-eslint/class-literal-property-style': 'off',

@@ -27,9 +27,12 @@ module.exports = {
 
   extends: ['./config/core'].map(require.resolve),
 
-  overrides: ['./config/typescript', './config/tests', './config/prettier'].map(
-    require,
-  ),
+  overrides: [
+    './config/typescript',
+    './config/imports',
+    './config/tests',
+    './config/prettier',
+  ].map(require),
 
   ignorePatterns: ['**/node_modules/**', '**/build/**', '**/dist/**'],
 

@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "format": "prettier --write .",
-    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "lint": "eslint --fix . --ext .ts,.tsx,.js,.jsx",
     "release": "np",
     "test": "exit 0"
   },
@@ -24,6 +24,8 @@
     "@typescript-eslint/parser": "^7.1.0",
     "@typescript-eslint/utils": "^7.1.0",
     "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jest": "^27.9.0",
     "eslint-plugin-jest-dom": "^5.1.0",
     "eslint-plugin-jsx-a11y": "^6.8.0",

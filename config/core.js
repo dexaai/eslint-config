@@ -19,7 +19,6 @@ module.exports = {
     'no-duplicate-case': 'error',
     'no-empty-character-class': 'error',
     'no-empty-pattern': 'error',
-    'no-duplicate-imports': 'error',
     'no-empty': ['error', { allowEmptyCatch: true }],
     'no-eval': 'error',
     'no-ex-assign': 'error',
