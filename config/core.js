@@ -105,7 +105,7 @@ module.exports = {
      * Below here is additional rules from the TypeScript source repo ESLint config
      */
     'dot-notation': 'error',
-    eqeqeq: 'error',
+    eqeqeq: ['error', 'always', { null: 'ignore' }],
     'no-constant-condition': ['error', { checkLoops: false }],
     'no-new-wrappers': 'error',
     'no-return-await': 'error',
