@@ -77,6 +77,7 @@ module.exports = {
     'jsx-a11y/img-redundant-alt': 'error',
     'jsx-a11y/lang': 'error',
     'jsx-a11y/no-access-key': 'error',
+    'jsx-a11y/no-autofocus': 'off',
     'jsx-a11y/no-redundant-roles': 'error',
     'jsx-a11y/role-has-required-aria-props': 'error',
     'jsx-a11y/role-supports-aria-props': 'error',

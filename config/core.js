@@ -4,7 +4,7 @@ module.exports = {
   rules: {
     // Our existing rules
     'array-callback-return': 'error',
-    'curly': ['error', 'multi-line'],
+    curly: ['error', 'multi-line'],
     'getter-return': 'error',
     'new-parens': 'error',
     'no-array-constructor': 'error',
@@ -109,15 +109,6 @@ module.exports = {
     'no-constant-condition': ['error', { checkLoops: false }],
     'no-new-wrappers': 'error',
     'no-return-await': 'error',
-    'no-restricted-globals': [
-      'error',
-      { name: 'setTimeout' },
-      { name: 'clearTimeout' },
-      { name: 'setInterval' },
-      { name: 'clearInterval' },
-      { name: 'setImmediate' },
-      { name: 'clearImmediate' },
-    ],
     'no-throw-literal': 'error',
     'no-undef-init': 'error',
     'no-var': 'error',
