@@ -85,7 +85,6 @@ module.exports = {
     ],
     'no-useless-computed-key': 'error',
     'no-useless-concat': 'error',
-    'no-useless-constructor': 'error',
     'no-useless-escape': 'error',
     'no-useless-rename': [
       'error',
